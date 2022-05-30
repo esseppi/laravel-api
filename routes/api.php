@@ -23,4 +23,5 @@ Route::get('v1/count', 'Api\CoinBalanceController@count');
 Route::get('v1/trades', 'Api\TradeController@index');
 
 // READ BALANCE
+Route::get('v1/easydefi/coins', 'Api\CoinController@totalCoins');
 Route::get('v1/balance/{wallet_id}', 'Api\CoinBalanceController@walletBalance');

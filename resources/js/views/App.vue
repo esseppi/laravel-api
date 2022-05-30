@@ -2,12 +2,8 @@
   <!-- App.vue -->
 
   <v-app>
-    <v-navigation-drawer app>
-      <Drawer />
-    </v-navigation-drawer>
-    <v-app-bar color="deep-purple accent-4" dense dark app>
-      <HeaderApp />
-    </v-app-bar>
+    <Drawer />
+    <HeaderApp />
 
     <!-- Sizes your content based upon application components -->
     <v-main>

@@ -6,24 +6,29 @@ require("./bootstrap");
 import App from "./views/App.vue";
 import VueRouter from "vue-router";
 import Vuetify from "../plugins/vuetify";
-import "material-design-icons-iconfont/dist/material-design-icons.css";
+import "@mdi/font/css/materialdesignicons.css";
 
 import HomePage from "./pages/HomePage.vue";
 import Coins from "./pages/Coins.vue";
 import Trades from "./pages/Trades.vue";
 import MyWallet from "./pages/MyWallet.vue";
 Vue.use(VueRouter, {
-    iconfont: "mdi", // 'md' || 'mdi' || 'fa' || 'fa4'
+    iconfont: "fa4", // 'md' || 'mdi' || 'fa' || 'fa4'
 });
 
 const router = new VueRouter({
     mode: "history",
     routes: [
-        // {
-        //     path: "/",
-        //     name: "home",
-        //     component: HomePage,
-        // },
+        {
+            path: "/coins",
+            name: "allCoins",
+            component: Coins,
+        },
+        {
+            path: "/home",
+            name: "home",
+            component: HomePage,
+        },
         // {
         //     path: "/coins",
         //     name: "allCoins",
@@ -40,11 +45,6 @@ const router = new VueRouter({
         //     component: MyWallet,
         //     props: true,
         // },
-        {
-            path: "/coins",
-            name: "allCoins",
-            component: Coins,
-        },
     ],
 });
 
